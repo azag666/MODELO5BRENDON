@@ -8,17 +8,14 @@
   <!-- Script para múltiplas configurações de pixel e redirecionamento -->
   <script>
     const API_URL = 'https://novaapi-one.vercel.app/api/registerClick';
-    const TELEGRAM_USERNAME = 'gabriellabbimbot'; // Nome de usuário do bot atualizado
+    const TELEGRAM_USERNAME = 'gabriellabbimbot';
     const CLIENT_ID = '123';
-    // Novos ID e TOKEN incluídos
-    const PRESS_ID = '1252399406147500';
-    const PRESS_TOKEN = 'EAALOjCWCLaUBPEjmvvw5PyEdqagVNFXMZBtOROrwQHCXgMRyEkZC4Xt6UjTqBuYZAMtyyhpxv759E8VPLQj9JY9dY0lowZAWZA9BUVXwAFObQcbTPlpu1ggSlBzclxzrxe7q3tmloHvYD6VQRoIL5NMRU6QHm5Tlp7qJNab7jZAdcjZAqZCpdxC2PGM3WrlullL84QZDZD';
-
 
     // Array de pixels para rastrear
     const PIXELS_TO_TRACK = [
       { id: '762701059469722', noscript_url: "https://www.facebook.com/tr?id=762701059469722&ev=PageView&noscript=1" },
-      { id: '1817379038816925', noscript_url: "https://www.facebook.com/tr?id=1817379038816925&ev=PageView&noscript=1" } // Novo pixel adicionado
+      { id: '1817379038816925', noscript_url: "https://www.facebook.com/tr?id=1817379038816925&ev=PageView&noscript=1" },
+      { id: '524121253404788', noscript_url: "https://www.facebook.com/tr?id=524121253404788&ev=PageView&noscript=1" } // Novo pixel adicionado
     ];
 
     const botKeywords = [
@@ -121,19 +118,17 @@
     }(window, document,'script');
 
     // Inicializa e rastreia o PageView para cada pixel no array
-    const pixels = [
-      { id: '762701059469722' },
-      { id: '1817379038816925' } // Novo pixel
-    ];
-    pixels.forEach(p => {
+    PIXELS_TO_TRACK.forEach(p => {
       fbq('init', p.id);
       fbq('track', 'PageView');
     });
   </script>
   <!-- NoScript para Pixels -->
   <noscript>
+    <!-- Adiciona um iframe ou imagem para cada pixel -->
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=762701059469722&ev=PageView&noscript=1"/>
     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1817379038816925&ev=PageView&noscript=1"/>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=524121253404788&ev=PageView&noscript=1"/>
   </noscript>
 
   <!-- Twitter conversion tracking base code -->
